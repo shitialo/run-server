@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <title>Email from <%= name %></title>
+
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+            min-width: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1rem;
+            line-height: 1.5;
+            background-color: #FAFAFA;
+            color: #222222;
+        }
+
+        a {
+            color: #000000;
+            text-decoration: none;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 1.25;
+            margin-top: 0;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+
+        table td {
+            vertical-align: top;
+        }
+
+        /*** Layout Design ***/
+        .email-wrapper {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .email-header {
+            background-color: #0e7eff;
+            padding: 12px;
+            color: #FFFFFF;
+        }
+
+        .email-body {
+            padding: 24px;
+            background-color: #ffffff;
+        }
+
+        .email-footer {
+            background-color: #3e3e3e;
+            padding: 24px;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .email-footer a {
+            color: #ffffff;
+            margin-bottom: 0 !important;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="email-wrapper">
+        <div class="email-header">
+            <h1>Email from <%= name %>
+            </h1>
+        </div>
+        <div class="email-body">
+            <p style="font-size: 1rem;">
+                <%= name %>
+            </p>
+            <p style="font-size: 1.2rem; font-weight: bold;">
+                <%= subject %>
+            </p>
+            <p>
+                <a href="mailto:<%= email %>" style="color: #005ff7; font-size: 1rem;">
+                    <%= email %>
+                </a>
+            </p>
+
+            <p style="font-size: 1rem;">
+                <%= message %>
+            </p>
+        </div>
+        <div class="email-footer">
+            <p> <a href="mailto:<%= email %>">
+                    Reply to <%= email %>
+                </a></p>
+        </div>
+
+    </div>
+</body>
+
+</html>
